@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: #ed0707;
+  color: #fff;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+}
+nav .left__navbar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+nav .left__navbar .letf__navabar-logo {
+  display: flex;
+  justify-content: center;
+  border: 2px solid green;
+}
+nav .left__navbar .letf__navabar-logo img {
+  width: 150px;
+}
+nav .left__navbar .language {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid green;
+}
+nav .left__navbar .language img {
+  width: 16px;
+  height: 16px;
+}/*# sourceMappingURL=main.css.map */

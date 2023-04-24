@@ -1,0 +1,12 @@
+$primary-color: #ed0707;
+$secondary-color: #fff;
+$tertiary-color: #f3f2f2;
+$text-color: #323237;
+$fuente1: 'Lato', sans-serif;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
