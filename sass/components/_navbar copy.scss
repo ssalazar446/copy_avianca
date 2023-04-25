@@ -1,0 +1,58 @@
+@use './index' as *;
+
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    .left__navbar{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        .letf__navabar-logo{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 150px;
+            }
+        }
+        .language{
+            width: 30%;
+            @include flexCenter(row, space-around, center);
+            margin-left: -40px;
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        } 
+        .login{
+            width: 20%;
+            @include flexCenter(row, space-around, center);
+            margin-left: -40px;
+            .user-icon{
+                width: 16px;
+                height: 16px;
+            }
+            .arrow-down{
+                width: 11px;
+                height: 11px;
+            }
+
+        }
+    }
+    .right__navbar{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+}
