@@ -8,7 +8,7 @@
         padding: 15px;
         position: relative;
         top: -65px;
-        margin-bottom: -25px;
+        margin-bottom: -55px;
         background-color: $secondary-color;
         border-radius: 7px;
         box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
@@ -175,5 +175,31 @@
                 margin-top: 5px;
             }
         }
+    }
+    .panel-manage{
+        font-weight: 700;
+        font-size: 1rem;
+        height: 44px;
+        line-height: 14px;
+        color: #36363b;
+        width: 90%;
+        padding: 16px;
+        margin-bottom: 10px;
+        @include flexCenter(row, space-between, center);
+        background-color: $secondary-color;
+        border-radius: 7px;
+        box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
+        img {
+            width: 12px;
+        }
+    }
+    .panel-checkin {
+        @extend .panel-manage;
+    }
+    .panel-state {
+        @extend .panel-manage;
+    }
+    .panel-ejecutiveclass {
+        @extend .panel-manage;
     }
 }

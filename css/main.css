@@ -132,7 +132,7 @@ nav .right__navbar a {
   padding: 15px;
   position: relative;
   top: -65px;
-  margin-bottom: -25px;
+  margin-bottom: -55px;
   background-color: #fff;
   border-radius: 7px;
   box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
@@ -316,4 +316,24 @@ nav .right__navbar a {
 .reserv__flight fieldset .tabs-opcionales img {
   width: 15px;
   margin-top: 5px;
+}
+.reserv__flight .panel-manage, .reserv__flight .panel-ejecutiveclass, .reserv__flight .panel-state, .reserv__flight .panel-checkin {
+  font-weight: 700;
+  font-size: 1rem;
+  height: 44px;
+  line-height: 14px;
+  color: #36363b;
+  width: 90%;
+  padding: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
+}
+.reserv__flight .panel-manage img, .reserv__flight .panel-ejecutiveclass img, .reserv__flight .panel-state img, .reserv__flight .panel-checkin img {
+  width: 12px;
 }/*# sourceMappingURL=main.css.map */
