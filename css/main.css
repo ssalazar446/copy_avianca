@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +24,8 @@ nav {
   background-color: #ed0707;
   color: #fff;
   position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
 }
@@ -55,16 +61,17 @@ nav .right__navbar a {
   display: none;
 }
 
-section {
+.buy__flight {
   height: 432px;
+  width: 100%;
 }
-section img {
+.buy__flight img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section .gradient {
+.buy__flight .gradient {
   position: absolute;
   height: 86%;
   left: 0;
@@ -72,7 +79,7 @@ section .gradient {
   width: 100%;
   background-image: linear-gradient(to left, rgba(66, 66, 66, 0), rgba(0, 0, 0, 0.5));
 }
-section .gradient .container__title {
+.buy__flight .gradient .container__title {
   margin-top: 107px;
   width: 100%;
   height: auto;
@@ -84,7 +91,7 @@ section .gradient .container__title {
   justify-content: center;
   align-items: center;
 }
-section .gradient .container__title h2 {
+.buy__flight .gradient .container__title h2 {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-size: 1.75rem;
@@ -93,12 +100,12 @@ section .gradient .container__title h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
-section .gradient .container__title p {
+.buy__flight .gradient .container__title p {
   line-height: 25px;
   font-weight: 700;
   font-size: 1.1rem;
 }
-section .gradient .container__title a {
+.buy__flight .gradient .container__title a {
   text-decoration: none;
   font-size: 0.75rem;
   height: 40px;
@@ -106,8 +113,207 @@ section .gradient .container__title a {
   background-color: #ed0707;
   color: #fff;
   border-radius: 5px;
+  letter-spacing: 1px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.reserv__flight {
+  background-color: #f3f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight .panel-reserv {
+  width: 90%;
+  padding: 15px;
+  position: relative;
+  top: -65px;
+  margin-bottom: -25px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
+}
+.reserv__flight .panel-reserv .title-reserv {
+  color: #ed0707;
+  font-weight: 700;
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reserv__flight .panel-reserv .title-reserv img {
+  width: 12px;
+  margin-right: 5px;
+}
+.reserv__flight .bottom-line {
+  color: #dedddd;
+}
+.reserv__flight .select-panel {
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 22px;
+}
+.reserv__flight .select-panel input {
+  margin-top: -5px;
+}
+.reserv__flight fieldset {
+  border: none;
+}
+.reserv__flight fieldset .container-trayecto, .reserv__flight fieldset .container-aditional {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-origen, .reserv__flight fieldset .container-aditional .ciudad-origen {
+  height: 72px;
+  border: solid 1px #dedddd;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 3px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-origen .from, .reserv__flight fieldset .container-aditional .ciudad-origen .from {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #323237;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-origen .origin, .reserv__flight fieldset .container-aditional .ciudad-origen .origin {
+  font-size: 0.625rem;
+  color: #737376;
+  padding: 0 15px;
+  line-height: 1rem;
+  letter-spacing: 0;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-destino, .reserv__flight fieldset .container-aditional .ciudad-destino {
+  height: 72px;
+  border: solid 1px #dedddd;
+  background-color: #fff;
+  border-radius: 0 3px 0 0;
+  border-left: 0;
+  border-left-style: none;
+  width: 49.9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-destino .to, .reserv__flight fieldset .container-aditional .ciudad-destino .to {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #323237;
+}
+.reserv__flight fieldset .container-trayecto .ciudad-destino .destiny, .reserv__flight fieldset .container-aditional .ciudad-destino .destiny {
+  font-size: 0.625rem;
+  color: #737376;
+  padding: 0 15px;
+  line-height: 1rem;
+  letter-spacing: 0;
+}
+.reserv__flight fieldset .swap-arrow {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 5;
+  left: calc(50% - 12px);
+  text-align: center;
+}
+.reserv__flight fieldset .container-aditional .fecha-viaje {
+  height: 49px;
+  border: solid 1px #dedddd;
+  border-top: 0;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 0 0 0 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .container-aditional .fecha-viaje div {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0;
+  color: #323237;
+}
+.reserv__flight fieldset .container-aditional .cantidad-personas {
+  height: 49px;
+  border: solid 1px #dedddd;
+  border-top: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 3px 0;
+  border-left: 0;
+  width: 49.9%;
+}
+.reserv__flight fieldset .container-aditional .cantidad-personas div {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0;
+  color: #323237;
+}
+.reserv__flight fieldset .descuento {
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .descuento img {
+  width: 13px;
+}
+.reserv__flight fieldset .descuento p {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #737376;
+  padding-left: 5px;
+}
+.reserv__flight fieldset .search-flights {
+  text-decoration: none;
+  font-size: 0.75rem;
+  height: 48px;
+  width: 100%;
+  min-width: 180px;
+  background-color: #ed0707;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.reserv__flight fieldset .tabs-opcionales {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+}
+.reserv__flight fieldset .tabs-opcionales a {
+  margin-left: 4px;
+  margin-right: 10px;
+  color: #343e5b;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.reserv__flight fieldset .tabs-opcionales img {
+  width: 15px;
+  margin-top: 5px;
 }/*# sourceMappingURL=main.css.map */

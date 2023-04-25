@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width:768px)">
+    <!-- <link rel="stylesheet" href="./css/tablet.css" media="(min-width:768px)"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
@@ -40,19 +40,88 @@
         </div>
     </nav>
 
-    <main>
-        <section class="buy__flight">
-            <img src="./assets/img/bgpalm.jpg" alt="background palm">
-            <div class="gradient">
-                <div class="container__title">
-                    <h2>Date un gusto</h2>
-                    <p> Elige tu próximo destino, vuelos nacionales desde COP 127.200</p>
-                    <a href="#">Compra ya</a>
-                </div>
-            </div>
-        </section>
 
-    </main>
+    <section class="buy__flight">
+        <img src="./assets/img/bgpalm.jpg" alt="background palm">
+        <div class="gradient">
+            <div class="container__title">
+                <h2>Date un gusto</h2>
+                <p> Elige tu próximo destino, vuelos nacionales desde COP 127.200</p>
+                <a href="#">Compra ya</a>
+            </div>
+        </div>
+    </section>
+    <section class="reserv__flight">
+        <div class="panel-reserv">
+            <div class="title-reserv">
+                Reserva tu vuelo
+                <img src="./assets/svg/arrow-up.svg" alt="">
+            </div>
+            <hr class="bottom-line">
+            <div class="select-panel">
+                <input type="radio" id="goandback" name="type_travel" value="idaYvuelta">
+                <label for="goandback">Ida y vuelta</label>
+                <input type="radio" id="justgo" name="type_travel" value="ida">
+                <label for="justgo">Solo ida</label>
+            </div>
+            <div class="main-content">
+                <form action="post">
+                    <fieldset>
+                        <div class="container-trayecto">
+                            <div class="ciudad-origen">
+                                <div class="from">Desde</div>
+                                <div class="origin">Origen</div>
+                            </div>
+                            <img src="./assets/svg/swap-arrow.svg" class="swap-arrow" alt="swap arrow">
+                            <div class="ciudad-destino">
+                                <div class="to">Hacia</div>
+                                <div class="destiny">Destino</div>
+                            </div>
+                        </div>
+                        <div class="container-aditional">
+                            <div class="fecha-viaje">
+                                <div>Fechas de viaje</div>
+                            </div>
+                            <div class="cantidad-personas">
+                                <div>1 Adulto</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="descuento">
+                            <img src="./assets/svg/add-circle.svg" alt="">
+                            <p>Añadir código promocional</p>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <a href="#" class="search-flights">Buscar vuelos</a>
+                    </fieldset>
+                    <fieldset>
+                        <div class="tabs-opcionales">
+                            <a href="#">
+                                Reservas de grupos
+                                <img src="./assets/svg/baseline-launch.svg" alt="">
+                            </a>
+                            <a href="#">
+                                Hoteles
+                                <img src="./assets/svg/baseline-launch.svg" alt="">
+                            </a>
+                            <a href="#">
+                                Alquiler de autos
+                                <img src="./assets/svg/baseline-launch.svg" alt="">
+                            </a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </section>
+
     <footer>
 
     </footer>

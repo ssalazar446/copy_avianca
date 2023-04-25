@@ -1,0 +1,179 @@
+@use './index' as *;
+
+.reserv__flight {
+    background-color: $tertiary-color;
+    @include flexCenter(column, center, center);
+    .panel-reserv {
+        width: 90%;
+        padding: 15px;
+        position: relative;
+        top: -65px;
+        margin-bottom: -25px;
+        background-color: $secondary-color;
+        border-radius: 7px;
+        box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 0.1);
+        .title-reserv {
+            color: $primary-color;
+            font-weight: 700;
+            padding-bottom: 7px;
+            @include flexCenter(row, space-between, null);
+            img {
+                width: 12px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .bottom-line {
+        color: #dedddd;
+    }
+
+    .select-panel {
+        display: flex;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 22px;
+        input{
+            margin-top: -5px;
+        }
+    }
+    fieldset {
+        border: none;
+        .container-trayecto {
+            @include flexCenter(row, center, center);
+            .ciudad-origen{
+                height: 72px;
+                border: solid 1px #dedddd;
+                background-color: #fff;
+                width: 50%;
+                border-radius: 3px 0 0 0;
+                @include flexCenter(column, center, center);
+                .from {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    color: #323237;
+                }
+                .origin{
+                    font-size: .625rem;
+                    color: #737376;
+                    padding: 0 15px;
+                    line-height: 1rem;
+                    letter-spacing: 0;
+                }
+            }
+            .ciudad-destino{
+                height: 72px;
+                border: solid 1px #dedddd;
+                background-color: #fff;
+                border-radius: 0 3px 0 0;
+                border-left: 0;
+                border-left-style: none;
+                width: 49.9%;
+                @include flexCenter(column, center, center);
+                .to{
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    color: #323237;
+                }
+                .destiny{
+                    font-size: .625rem;
+                    color: #737376;
+                    padding: 0 15px;
+                    line-height: 1rem;
+                    letter-spacing: 0;
+                }
+            }
+
+        }
+        .swap-arrow {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            z-index: 5;
+            left: calc(50% - 12px);
+            text-align: center;
+        
+        }
+        .container-aditional {
+            @extend .container-trayecto;
+            .fecha-viaje{
+                height: 49px;
+                border: solid 1px #dedddd;
+                border-top: 0;
+                background-color: #fff;
+                width: 50%;
+                border-radius: 0 0 0 3px;
+                @include flexCenter(column, center, center);
+                div {
+                    font-weight: 400;
+                    font-size: .875rem;
+                    line-height: 1rem;
+                    letter-spacing: 0;
+                    color: #323237;
+                }
+            }
+            .cantidad-personas {
+                height: 49px;
+                border: solid 1px #dedddd;
+                border-top: 0;
+                background-color: #fff;
+                @include flexCenter(column, center, center);
+                border-radius: 0 0 3px 0;
+                border-left: 0;
+                width: 49.9%;
+                div {
+                    font-weight: 700;
+                    font-size: .75rem;
+                    line-height: 1rem;
+                    letter-spacing: 0;
+                    color: #323237;
+                }
+            }
+        }
+        .descuento {
+            height: 20px;
+            padding: 5px;
+            @include flexCenter(row, center, center);
+            img{
+                width: 13px;
+            }
+            p{
+                font-size: .75rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+                color: #737376;
+                padding-left: 5px;
+            }
+        }
+        .search-flights {
+            text-decoration: none;
+            font-size: .75rem;
+            height: 48px;
+            width: 100%;
+            min-width: 180px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            @include flexCenter(row, center, center);
+        }
+        .tabs-opcionales{
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 16px;
+            a{
+                margin-left: 4px;
+                margin-right: 10px;
+                color: #343e5b;
+                font-size: .75rem;
+                text-decoration: none;
+            }
+            img {
+                width: 15px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
