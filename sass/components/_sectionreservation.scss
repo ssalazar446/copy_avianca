@@ -3,6 +3,7 @@
 .reserv__flight {
     background-color: $tertiary-color;
     @include flexCenter(column, center, center);
+    padding-bottom: 25px;
     .panel-reserv {
         width: 90%;
         padding: 15px;
